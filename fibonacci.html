@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Fibonacci sequence</title>
+    </head>
+    <body>
+        <h1>Fibonacci Sequence</h1>
+        <form id="frmFibo" action="javascript:funcValidate()">
+	        <label>Please Input a number : </label>
+	        <input id="inputNum" type="text" placeholder="Number greater than 1">
+	        <input id="submitNum" type="submit" value="OK">
+	    </form>      
+	    <script>
+	            function funcValidate() {
+	            	var num = document.getElementById("inputNum").value;
+	            	if(num<=1){
+	                    alert("Please input greater than 1");
+	                } else if(num>1){
+	                    funcFibonacci(num);
+	                } else {
+	                	alert("Please input number");
+	                }
+	            }
+	            
+	            function funcFibonacci(num){
+	            	var arrFibo = [1, 1];
+	            	while(arrFibo[arrFibo.length-1]<=num) {
+            			arrFibo.push(arrFibo[arrFibo.length-1] + arrFibo[arrFibo.length-2]);
+	            	}
+	            	funcPrint(num, arrFibo);
+	            }
+
+	            function funcPrint(num, arr) {
+	            	var str = "Fibonacci Sequence till " + num + " is : ";
+	            	for(var i=0; i<arr.length-1; i++) {
+	            		if(i === 0) {
+	            			str += arr[i];
+	            		} else {
+	            			str += ", " + arr[i];
+	            		}
+	            	}
+	            	document.getElementById("result").innerHTML = str;
+	            }
+	        </script>  
+	        <h2 id="result" style="font-size: 30px;" />
+    </body>
+</html>

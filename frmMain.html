@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Cache-control" content="no-cache">
+        <link rel="stylesheet" href="web.css" />
+        <link rel="stylesheet" media="(max-width:480px)" href="mobile.css" />
+        <title>Registration</title>
+    </head>
+    <body>
+    	<!-- header area -->
+    	<div class="header">
+    		<h1>Registration Form</h1>
+    	</div>
+    	
+    	<!-- navigator area -->
+    	<div class="nav">
+    		<a href="javascript:goHome();">Home</a>
+    		<a href="javascript:goFib();">Fibonacci Sequence</a>
+            <script type="text/javascript">
+                function goHome() {
+                    document.getElementById("childObject").data = "frmRegistration.html";
+                }
+                function goFib() {
+                    document.getElementById("childObject").data = "fibonacci.html";
+                }
+            </script>
+    	</div>
+    	
+    	<!-- main area -->
+    	<div class="row">
+    		<div class="left">
+    			<div class="card">
+                    <object id="childObject" type="text/html" data="frmRegistration.html"> </object>
+    			</div>
+    		</div>
+
+    		<!-- sidebar content area -->
+	    	<div class="right">
+	    		<div class="card">
+	    			<h2 style="margin-top: 0px;">Visit Jiyoon's Github</h2>
+	    			<a target="blank" href="https://github.com/jaceyan90">Go now</a>
+	    		</div>
+	    	</div>
+    	</div>
+
+    	<!-- footer area -->
+    	<div class="footer">
+    		<p>All right reserved</p>
+    	</div>
+
+
+        
+    </body>
+</html>
